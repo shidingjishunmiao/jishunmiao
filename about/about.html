@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>集順廟明德宮</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./about.css">
+    <link rel="stylesheet" href="../public.css">
+    <link rel="stylesheet" href="../media.css">
+    <script src='https://cdnjs.cloudflare.com/ajax/libs/vue/3.4.26/vue.global.js'
+        integrity='sha512-hNMgba8fmKQrKyjVJtVTRzg5w4ISyHN+HgxZ1nbLVWP6cQThiiamn/wI5K6C9jmymVguk5ZgNxg2CyJVEsCCxg=='
+        crossorigin='anonymous'></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div id="top"></div>
+    <header>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid px-5">
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#link_box">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="link_box">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link links" href="../index.html">首頁</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links" href="../index.html#about">關於廟宇</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links" href="../index.html#bus">交通指南</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links" href="../index.html#information">參拜資訊</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links" href="../Talisman/index.html">平安符</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link links" href="#top">關於石碇</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="abheader container-fluid p-0">
+            <section class="container-fluid abheader_section">
+                <div class="container-fluid px-lg-5">
+                    <div class="row">
+                        <div class="header_item my-5 fs-1 mt-2 mb-4 px-3 py-2"></div>
+                        <div class="header_titlebox col-lg-5 col-sm-12 col-12">
+                            <h1 class="header_title line">關於石碇</h1>
+                        </div>
+                    </div>
+            </section>
+        </div>
+    </header>
+    <div id="app">
+        <main>
+            <section class="section container-fluid">
+                <div class="row">
+                    <div class="col-lg-5 col-xl-4 col-sm-10 calma_contianer p-0">
+                        <h1 class="calma_title pe-5 py-3" v-html="aboutsd.calma.title"></h1>
+                    </div>
+                    <div class="calma_img col-lg-7 col-xl-8 col-sm-12">
+                        <img src="../images/run_img.png" width="100%">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="calma_text_box">
+                        <p class="col-lg-12 col-xl-12 col-sm-12 calma_text p-0" v-html="aboutsd.calma.text"></p>
+                    </div>
+                </div>
+            </section>
+            <section class="section container-fluid">
+                <div class="row">
+                    <div class="col-lg-5 col-xl-4 col-sm-10 sdos_contianer p-0">
+                        <h1 class="sdos_title pe-5 py-3" v-html="aboutsd.calma.title"></h1>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="sdos_text_box">
+                        <p class="col-lg-12 col-xl-12 col-sm-12 calma_text p-0" v-html="aboutsd.sdos.text"></p>
+                    </div>
+                </div>
+            </section>
+            <section class="section container-fluid">
+                <div class="row">
+                    <div class="col-lg-5 col-xl-4 col-sm-10 introduce_contianer p-0">
+                        <h1 class="introduce_title py-3" v-html="aboutsd.feature.title"></h1>
+                    </div>
+                </div>
+            </section>
+            <section class="section container-fluid">
+                <div class="feature_contianer">
+                    <div class="feature_item row  justify-content-end" v-for="item in feature" :key="item">
+                        <div class="col-lg-1 col-xl-1 col-sm-2 col-2">
+                            <div class="feature_btn fs-1">{{item.num}}</div>
+                        </div>
+                        <div class="col-lg-11 col-xl-11 col-sm-10 col-10">
+                            <div class="feature_title fs-2">{{item.title}}</div>
+                        </div>
+                        <div class="col-lg-11 col-xl-11 col-sm-11 col-11">
+                            <h2 class="feature_text">{{item.text}}</h2>
+                        </div>
+                    </div>
+                    <!------------------------------------------------>
+                    <!-- <div class="col-lg-12 col-xl-12 col-sm-12 order-md-1 order-sm-2 feature_content"> -->
+
+                    <!-- </div> -->
+            </section>
+        </main>
+        <footer>
+            <div class="container-fluid py-4">
+                <div class="row footer_container mb-4">
+                    <img src="../images/剪影-橘.png" class="footer_img">
+                    <div class="footer_content col-xxl-9 col-xl-12">
+                        <div class="footer_box">
+                            <h1 class="footer_title">地址</h1>
+                            <h3 class="footer_text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                    class="bi bi-geo-alt-fill" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10m0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6" />
+                                </svg>
+                                223新北市石碇區石碇西街9號
+                            </h3>
+                            <h3 class="footer_text">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                    class="bi bi-telephone-fill" viewBox="0 0 16 16">
+                                    <path fill-rule="evenodd"
+                                        d="M1.885.511a1.745 1.745 0 0 1 2.61.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.68.68 0 0 0 .178.643l2.457 2.457a.68.68 0 0 0 .644.178l2.189-.547a1.75 1.75 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.6 18.6 0 0 1-7.01-4.42 18.6 18.6 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877z" />
+                                </svg>
+                                02 2663 1366
+                            </h3>
+                        </div>
+                        <div class="footer_box">
+                            <h1 class="footer_title">開放時間</h1>
+                            <h3 class="footer_text">8:00-17:00號</h3>
+                            <h1 class="footer_title">誦經班</h1>
+                            <h3 class="footer_text">每週二、週五14:00</h3>
+                        </div>
+                        <div class="footer_box">
+                            <h1 class="footer_title">聯絡我們</h1>
+                            <a href="https://www.facebook.com/p/%E7%9F%B3%E7%A2%87%E9%9B%86%E9%A0%86%E5%BB%9F-100081791381915/?paipv=0&eav=AfZn9S8TEXdp7IikxIDz0kRWY8enj-5NoSyUPdCxZZxx36HIvT_X4xoNQ-RP8TM1xvI&_rdr"
+                                target="_blank">
+                                <h3 class="footer_text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                        class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                    </svg>
+                                    石碇集順廟
+                                </h3>
+                            </a>
+                            <a href="https://www.facebook.com/sdtour223/?locale=zh_TW" target="_blank">
+                                <h3 class="footer_text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                        class="bi bi-facebook" viewBox="0 0 16 16">
+                                        <path
+                                            d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                                    </svg>
+                                    石碇觀光發展協會
+                                </h3>
+                            </a>
+                            <a href="https://www.instagram.com/sdtour223/" target="_blank">
+                                <h3 class="footer_text">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor"
+                                        class="bi bi-instagram ig_icon" viewBox="0 0 16 16">
+                                        <path
+                                            d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                                    </svg>
+                                    石碇觀光發展協會
+                                </h3>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <h3 class="copyright">Copyright©2024石碇集順廟明德宮</h3>
+            </div>
+        </footer>
+        <div class="robot_btn p-2" @click="toggle">
+            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                class="bi bi-chat-dots-fill" viewBox="0 0 16 16">
+                <path
+                    d="M16 8c0 3.866-3.582 7-8 7a9 9 0 0 1-2.347-.306c-.584.296-1.925.864-4.181 1.234-.2.032-.352-.176-.273-.362.354-.836.674-1.95.77-2.966C.744 11.37 0 9.76 0 8c0-3.866 3.582-7 8-7s8 3.134 8 7M5 8a1 1 0 1 0-2 0 1 1 0 0 0 2 0m4 0a1 1 0 1 0-2 0 1 1 0 0 0 2 0m3 1a1 1 0 1 0 0-2 1 1 0 0 0 0 2" />
+            </svg>
+        </div>
+        <div class="robot_container" :style="toggleStyle">
+            <div class="robot_header">
+                <div class="robot_imgbox">
+                    <img src="../images/剪影-白.png" class="robot_img">
+                </div>
+            </div>
+            <div class="robot_body" ref="robotDiv">
+                <p class="robot_message">
+                    您好，歡迎來到集順廟明德宮！如果您有任何問題或需要幫助，請隨時告訴我，我會竭盡所能地協助您。
+                </p>
+                <div class="auto_message">
+                    <div class="auto_message_titlebox">
+                        <p>常見問題</p>
+                    </div>
+                    <div class="auto_message_textbox">
+                        <p v-for="item in question" @click="question_ans" :key="item"
+                            class="auto_message_text p-2 mb-0">
+                            {{item.ques}}
+                        </p>
+                    </div>
+                </div>
+                <p v-for="item in robot_message" v-if="getMessageLen" :style="{display:getMessageLen?'':'none'}"
+                    class="robot_message" :class="{admin_message:item.root === 'admin'}" v-html="item.message">
+                </p>
+            </div>
+            <div class="robot_footer py-4">
+                <input type="text" class="robot_input py-2 px-3" @keydown="send_ans" v-model="inputMessage">
+                <button class="robot_seed py-2 px-3" @click="send_ans">傳送</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="./data.js"></script>
+    <script src="../data.js"></script>
+    <script src="../index.js"></script>
+</body>
+
+</html>

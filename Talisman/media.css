@@ -1,0 +1,72 @@
+@media screen and (max-width:1400px) {}
+
+@media screen and (max-width:1200px) {
+    .img-step {
+        width: 100%;
+    }
+
+}
+
+@media screen and (max-width:992px) {
+    .chi {
+        letter-spacing: 12px;
+    }
+
+    .header_section {
+        margin-top: 5em;
+    }
+
+    .img img {
+        height: 40vh;
+    }
+
+    .talisman_box {
+        width: 70%;
+    }
+
+    .recitation-content {
+        width: 70%;
+    }
+
+
+}
+
+@media screen and (max-width:768px) {
+    .chi {
+        letter-spacing: 9px;
+    }
+
+    .img img {
+        height: 40vh;
+    }
+
+    .talisman_box {
+        width: 90%;
+    }
+
+    .recitation-content {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:576px) {
+    .chi {
+        letter-spacing: 6px;
+    }
+
+    .img>div {
+        width: 30%;
+    }
+
+    .img img {
+        height: 30vh;
+    }
+
+    .talisman_box,
+    .recitation-content {
+        margin: auto;
+    }
+    .draw_content{
+        width: 100%;
+    }
+}
